@@ -8,46 +8,45 @@
 
 int main(int argc, char *argv[]) {
 
-//    //get link database and project
-//    set_path();
+    //get link database and project
+    set_path();
+
+    //gtk initialize gtk
+    gtk_init(&argc, &argv);
+
+    //show intro window
+    intro_show();
+    //find_song("lap");
+
+
+//    mpg123_init();
+//    mpg123_handle *mh = mpg123_new(NULL, NULL);
+//    char *filename = "D:\\Project\\C\\mystic_melody\\database\\sound\\lap.mp3";
 //
-//    //gtk initialize gtk
-//    gtk_init(&argc, &argv);
+//    // Mở tệp tin MP3
+//    int err = mpg123_open(mh, filename);
+//    if (err != MPG123_OK) {
+//        printf("Không thể mở tệp tin.\n");
+//        return 1;
+//    }
 //
-//    //show intro window
-//    intro_show();
-//    //find_song("lap");
+//    // Lấy tổng số mẫu âm thanh
+//    off_t num_samples = mpg123_length(mh);
 //
-//    return 0;
-
-    mpg123_init();
-    mpg123_handle *mh = mpg123_new(NULL, NULL);
-    char *filename = "D:\\Project\\C\\mystic_melody\\database\\sound\\lap.mp3";
-
-    // Mở tệp tin MP3
-    int err = mpg123_open(mh, filename);
-    if (err != MPG123_OK) {
-        printf("Không thể mở tệp tin.\n");
-        return 1;
-    }
-
-    // Lấy tổng số mẫu âm thanh
-    off_t num_samples = mpg123_length(mh);
-
-    // Lấy tốc độ mẫu
-    long rate;
-    mpg123_getformat(mh, &rate, NULL, NULL);
-
-    // Tính số giây dựa trên tổng số mẫu và tốc độ mẫu
-    double seconds = (double)num_samples / (double)rate;
-    int result = (int) floor(seconds);
-    printf("Số giây của file MP3: %f\n", seconds);
-    printf("Số giây của file MP3: %d\n", result);
-
-    // Giải phóng bộ nhớ và đóng tệp tin
-    mpg123_close(mh);
-    mpg123_delete(mh);
-    mpg123_exit();
+//    // Lấy tốc độ mẫu
+//    long rate;
+//    mpg123_getformat(mh, &rate, NULL, NULL);
+//
+//    // Tính số giây dựa trên tổng số mẫu và tốc độ mẫu
+//    double seconds = (double)num_samples / (double)rate;
+//    int result = (int) floor(seconds);
+//    printf("Số giây của file MP3: %f\n", seconds);
+//    printf("Số giây của file MP3: %d\n", result);
+//
+//    // Giải phóng bộ nhớ và đóng tệp tin
+//    mpg123_close(mh);
+//    mpg123_delete(mh);
+//    mpg123_exit();
 
 
 //    magic_t magic_cookie;
