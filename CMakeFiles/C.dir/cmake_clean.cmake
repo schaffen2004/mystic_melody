@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "C.exe"
   "C.exe.manifest"
   "C.pdb"
+  "CMakeFiles/C.dir/src/Filter/Filter_image_source.c.obj"
+  "CMakeFiles/C.dir/src/Filter/Filter_image_source.c.obj.d"
   "CMakeFiles/C.dir/src/config/database_config.c.obj"
   "CMakeFiles/C.dir/src/config/database_config.c.obj.d"
   "CMakeFiles/C.dir/src/control/main_board_control.c.obj"

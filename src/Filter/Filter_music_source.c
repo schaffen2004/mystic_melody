@@ -5,7 +5,7 @@
 #include <string.h>
 #include <sqlite3.h>
 
-int isMusicFile(const char* filename) {
+int Filter_music(const char* filename) {
     const char* extension = strrchr(filename, '.'); // Lấy phần mở rộng của tên file
     if (extension != NULL) {
         if (strcmp(extension, ".mp3") == 0 || strcmp(extension, ".wav") == 0) {

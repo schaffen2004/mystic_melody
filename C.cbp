@@ -110,6 +110,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/codeN/mystic_melody/src/Filter/Filter_image_source.c">
+			<Option target="C"/>
+		</Unit>
 		<Unit filename="C:/codeN/mystic_melody/src/config/database_config.c">
 			<Option target="C"/>
 		</Unit>
