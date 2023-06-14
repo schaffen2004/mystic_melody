@@ -5,7 +5,9 @@
 #include "search_bar.h"
 #include "src/view/main_board_view.h"
 #include "src/control/main_board_control.h"
-GtkWidget *entry_search_bar;
+GtkWidget *entry_search_bar,
+        *exit_button,
+        *exit_icon;
 
 void  search_bar_show()
 {
@@ -25,23 +27,14 @@ void  search_bar_show()
 
     g_signal_connect(search, "clicked", G_CALLBACK(search_song), NULL);
 
-    // Khởi tạo nút log out
-    GtkWidget *logout = gtk_button_new_with_label("");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), logout, 1360, 10);
-    gtk_button_set_relief(GTK_BUTTON(logout), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_skip1 = gdk_pixbuf_new_from_file("assets/logout.svg", NULL);
-    GtkImage *image_skip1 = gtk_image_new_from_pixbuf(pixbuf_skip1);
-    gtk_button_set_image(GTK_BUTTON(logout), GTK_WIDGET(image_skip1));
-    gtk_widget_show(image_skip1);
 
-    GtkWidget *exit_button = gtk_button_new_with_label("");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), exit_button, 1420, 0);
-    gtk_button_set_relief(GTK_BUTTON(logout), GTK_RELIEF_NONE);
-    GdkPixbuf *pixbuf_skip2 = gdk_pixbuf_new_from_file("assets/exit_logo.svg", NULL);
-    GtkImage *image_skip2 = gtk_image_new_from_pixbuf(pixbuf_skip2);
-    gtk_button_set_image(GTK_BUTTON(exit_button), GTK_WIDGET(image_skip2));
-    gtk_widget_show(image_skip2);
+    exit_button = gtk_button_new_with_label("");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), exit_button, 1445, 19);
+    gtk_widget_set_size_request(exit_button, 50, 50);
     gtk_button_set_relief(GTK_BUTTON(exit_button), GTK_RELIEF_NONE);
-    g_signal_connect(logout, "clicked", G_CALLBACK(logout_click), NULL);
+
     g_signal_connect(exit_button, "clicked", G_CALLBACK(exit), NULL);
+
+    exit_icon = gtk_image_new_from_file("assets/exit_logo.png");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), exit_icon, 1440, 15);
 }

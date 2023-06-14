@@ -23,10 +23,12 @@ void set_header_bar_properties()
         *favourite_button,
         *library_button,
         *upload_button,
+        *logout_button,
         *explorer_icon,
         *favourite_icon,
         *library_icon,
-        *upload_icon;
+        *upload_icon,
+        *logout_icon;
 
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     rect_area = gtk_drawing_area_new();
@@ -60,11 +62,18 @@ void set_header_bar_properties()
     gtk_widget_set_size_request(upload_button, 80, 80);
     gtk_button_set_relief(GTK_BUTTON(upload_button), GTK_RELIEF_NONE);
 
+    // Khởi tạo nút Log out
+    logout_button = gtk_button_new_with_label("");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), logout_button, 0, 580);
+    gtk_widget_set_size_request(logout_button, 80, 80);
+    gtk_button_set_relief(GTK_BUTTON(logout_button), GTK_RELIEF_NONE);
+
     // Add event clicked cho từng nút
     g_signal_connect(explorer_button, "clicked", G_CALLBACK(tab_explorer_click), NULL);
     g_signal_connect(favourite_button, "clicked", G_CALLBACK(tab_favourite_click), NULL);
     g_signal_connect(library_button, "clicked", G_CALLBACK(tab_library_click), NULL);
     g_signal_connect(upload_button, "clicked", G_CALLBACK(tab_upload_click), NULL);
+    g_signal_connect(logout_button, "clicked", G_CALLBACK(logout_click), NULL);
 
     /*
     // Khởi tạo Logo của app ở đỉnh của selection menu
@@ -81,6 +90,8 @@ void set_header_bar_properties()
     gtk_fixed_put(GTK_FIXED(main_board_fixed), library_icon, 25, 325);
     upload_icon = gtk_image_new_from_file("assets/upload_icon.png");
     gtk_fixed_put(GTK_FIXED(main_board_fixed), upload_icon, 25, 425);
+    logout_icon = gtk_image_new_from_file("assets/logout.png");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), logout_icon, 25, 600);
 }
 
 void show_header_bar() {
