@@ -56,10 +56,17 @@ RM = "C:\Program Files\JetBrains\CLion 2023.1\bin\cmake\win\x64\bin\cmake.exe" -
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = C:\codeN\mystic_melody
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = C:\codeN\mystic_melody
+=======
+CMAKE_SOURCE_DIR = D:\mystic_melody
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = D:\mystic_melody
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +93,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\codeN\mystic_melody\CMakeFiles C:\codeN\mystic_melody\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\codeN\mystic_melody\CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\CMakeFiles D:\mystic_melody\CMakeFiles\progress.marks
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\CMakeFiles 0
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 .PHONY : all
 
 # The main clean target
@@ -368,29 +381,47 @@ src/view/components/add_playlist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/add_playlist.c.s
 .PHONY : src/view/components/add_playlist.c.s
 
+<<<<<<< HEAD
 src/view/components/menu.obj: src/view/components/menu.c.obj
 .PHONY : src/view/components/menu.obj
+=======
+src/view/components/header_bar.obj: src/view/components/header_bar.c.obj
+
+.PHONY : src/view/components/header_bar.obj
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 
 # target to build an object file
-src/view/components/menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.obj
-.PHONY : src/view/components/menu.c.obj
+src/view/components/header_bar.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.obj
+.PHONY : src/view/components/header_bar.c.obj
 
+<<<<<<< HEAD
 src/view/components/menu.i: src/view/components/menu.c.i
 .PHONY : src/view/components/menu.i
+=======
+src/view/components/header_bar.i: src/view/components/header_bar.c.i
+
+.PHONY : src/view/components/header_bar.i
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 
 # target to preprocess a source file
-src/view/components/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.i
-.PHONY : src/view/components/menu.c.i
+src/view/components/header_bar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.i
+.PHONY : src/view/components/header_bar.c.i
 
+<<<<<<< HEAD
 src/view/components/menu.s: src/view/components/menu.c.s
 .PHONY : src/view/components/menu.s
+=======
+src/view/components/header_bar.s: src/view/components/header_bar.c.s
+
+.PHONY : src/view/components/header_bar.s
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 
 # target to generate assembly for a file
-src/view/components/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.s
-.PHONY : src/view/components/menu.c.s
+src/view/components/header_bar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.s
+.PHONY : src/view/components/header_bar.c.s
 
 src/view/components/music_bar.obj: src/view/components/music_bar.c.obj
 .PHONY : src/view/components/music_bar.obj
@@ -599,9 +630,9 @@ help:
 	@echo ... src/view/components/add_playlist.obj
 	@echo ... src/view/components/add_playlist.i
 	@echo ... src/view/components/add_playlist.s
-	@echo ... src/view/components/menu.obj
-	@echo ... src/view/components/menu.i
-	@echo ... src/view/components/menu.s
+	@echo ... src/view/components/header_bar.obj
+	@echo ... src/view/components/header_bar.i
+	@echo ... src/view/components/header_bar.s
 	@echo ... src/view/components/music_bar.obj
 	@echo ... src/view/components/music_bar.i
 	@echo ... src/view/components/music_bar.s

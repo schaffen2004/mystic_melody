@@ -22,8 +22,8 @@ add_executable(${PROJECT_NAME}
         src/config/database_config.h
         src/view/intro_view.c
         src/view/intro_view.h
-        src/view/components/menu.c
-        src/view/components/menu.h
+        src/view/components/header_bar.c
+        src/view/components/header_bar.h
         src/view/components/music_bar.c
         src/view/components/music_bar.h
         src/view/components/search_bar.c

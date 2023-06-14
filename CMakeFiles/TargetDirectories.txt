@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 C:/codeN/mystic_melody/CMakeFiles/C.dir
 C:/codeN/mystic_melody/CMakeFiles/edit_cache.dir
 C:/codeN/mystic_melody/CMakeFiles/rebuild_cache.dir
+=======
+D:/mystic_melody/CMakeFiles/C.dir
+D:/mystic_melody/CMakeFiles/edit_cache.dir
+D:/mystic_melody/CMakeFiles/rebuild_cache.dir
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822

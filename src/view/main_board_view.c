@@ -3,18 +3,22 @@
 //
 
 #include "src/view/main_board_view.h"
-#include "src/view/components/menu.h"
+#include "src/view/components/header_bar.h"
 #include "src/view/components/music_bar.h"
 #include "src/view/components/search_bar.h"
 
 #include "src/control/main_board_control.h"
 
-GtkWidget *main_board_win;
-GtkWidget* main_board_fixed;
-GtkWidget *scrolled_window ,*home_button,*list,*list_tmp,
-        *heart_button,*library_button,
-        *add_playlist_button,*header_logo,*explore_icon,
-        *my_music_icon,*upload_icon,*rect_area,*tab_label;
+GtkWidget
+    *main_board_win,
+    *main_board_fixed,
+    *scrolled_window,
+    *list,
+    *list_tmp,
+    *add_playlist_button,
+    *header_logo,
+    *rect_area,
+    *tab_label;
 
 void set_main_board_properties()
 {
@@ -36,7 +40,7 @@ void set_main_board_properties()
     gtk_widget_set_size_request(scrolled_window, 1020, 510);
     gtk_fixed_put(GTK_FIXED(main_board_fixed), scrolled_window, 400, 170);
 
-    menu_show();
+    show_header_bar();
 
     music_bar_show();
 

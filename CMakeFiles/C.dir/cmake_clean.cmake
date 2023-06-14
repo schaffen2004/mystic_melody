@@ -21,9 +21,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/C.dir/src/models/users.c.obj"
   "CMakeFiles/C.dir/src/models/users.c.obj.d"
   "CMakeFiles/C.dir/src/view/components/add_playlist.c.obj"
+<<<<<<< HEAD
   "CMakeFiles/C.dir/src/view/components/add_playlist.c.obj.d"
   "CMakeFiles/C.dir/src/view/components/menu.c.obj"
   "CMakeFiles/C.dir/src/view/components/menu.c.obj.d"
+=======
+  "CMakeFiles/C.dir/src/view/components/header_bar.c.obj"
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
   "CMakeFiles/C.dir/src/view/components/music_bar.c.obj"
   "CMakeFiles/C.dir/src/view/components/music_bar.c.obj.d"
   "CMakeFiles/C.dir/src/view/components/search_bar.c.obj"

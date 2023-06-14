@@ -4,7 +4,6 @@
 
 #include "main_board_control.h"
 #include "src/view/sign_in_view.h"
-#include "src/view/components/menu.h"
 #include "src/view/components/music_bar.h"
 #include "src/view/components/search_bar.h"
 #include "src/view/main_board_view.h"
@@ -210,7 +209,7 @@ void tab_explorer_click()
     gtk_widget_show_all(scrolled_window);
 }
 
-void tab_my_music_click()
+void tab_favourite_click()
 {
     tab_previous=tab_curr;
     tab_curr=2;
@@ -237,7 +236,7 @@ void tab_my_music_click()
 
 }
 
-void tab_playlist_click()
+void tab_library_click()
 {
     tab_previous=tab_curr;
     tab_curr=3;
@@ -264,7 +263,7 @@ void tab_playlist_click()
     gtk_widget_show_all(scrolled_window);
 }
 
-void upload()
+void tab_upload_click()
 {
     tab_previous=tab_curr;
     tab_curr=4;

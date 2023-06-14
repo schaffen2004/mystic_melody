@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: C:/codeN/mystic_melody
+=======
+# Install script for directory: D:/mystic_melody
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "C:/codeN/mystic_melody/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "D:/mystic_melody/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
