@@ -17,7 +17,7 @@ void on_draw_menu(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
     cairo_stroke(cr); // draw the border
 }
 
-void load_menu_css()
+/*void load_menu_css()
 {
     //Load file css
     GtkCssProvider *provider = gtk_css_provider_new();
@@ -35,11 +35,10 @@ void load_menu_css()
         g_clear_error (&error);
     }
 
-    explore_context = gtk_widget_get_style_context(explorer_button);
-    my_music_context = gtk_widget_get_style_context(my_music_button);
-    playlist_context  = gtk_widget_get_style_context(playlist_button);
+    explore_context = gtk_widget_get_style_context(home_button);
+    my_music_context = gtk_widget_get_style_context(heart_button);
+    playlist_context  = gtk_widget_get_style_context(library_button);
     add_playlist_context = gtk_widget_get_style_context(add_playlist_button);
-    upload_context = gtk_widget_get_style_context(add_song_button);
 
     gtk_style_context_add_provider(explore_context, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
     gtk_style_context_add_provider(my_music_context, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
@@ -47,40 +46,35 @@ void load_menu_css()
     gtk_style_context_add_provider(add_playlist_context, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
     gtk_style_context_add_provider(playlist_context, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 }
+*/
 
 void set_menu_properties()
 {
     // Tạo một hình chữ nhật để chứa toàn bộ Widget
     rect_area = gtk_drawing_area_new();
     // Set size và vị trí cho hình chữ nhật
-    gtk_widget_set_size_request(rect_area,300 , 680);
+    gtk_widget_set_size_request(rect_area,100 , 800);
     gtk_fixed_put(GTK_FIXED(main_board_fixed), rect_area, 0, 0);
     // bắt đầu vẽ hình chữ nhật
     g_signal_connect(rect_area, "draw", G_CALLBACK(on_draw_menu), NULL);
 
     // Khởi tạo nút Explore
-    explorer_button = gtk_button_new_with_label("Explore");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), explorer_button, 0, 170);
-    gtk_widget_set_size_request(explorer_button, 300, 50);
-    gtk_button_set_relief(GTK_BUTTON(explorer_button), GTK_RELIEF_NONE);
-
-    // Khởi tạo nút My Music
-    my_music_button = gtk_button_new_with_label("My music");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), my_music_button, 0, 215);
-    gtk_widget_set_size_request(my_music_button, 300, 50);
-    gtk_button_set_relief(GTK_BUTTON(my_music_button), GTK_RELIEF_NONE);
+    home_button = gtk_button_new_with_label("");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), home_button, 0, 170);
+    gtk_widget_set_size_request(home_button, 300, 50);
+    gtk_button_set_relief(GTK_BUTTON(home_button), GTK_RELIEF_NONE);
 
     // Khởi tạo nút Playlist
-    playlist_button = gtk_button_new_with_label("Playlist");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), playlist_button, 0, 260);
-    gtk_widget_set_size_request(playlist_button, 300, 50);
-    gtk_button_set_relief(GTK_BUTTON(playlist_button), GTK_RELIEF_NONE);
+    heart_button = gtk_button_new_with_label("");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), heart_button, 0, 260);
+    gtk_widget_set_size_request(heart_button, 300, 50);
+    gtk_button_set_relief(GTK_BUTTON(heart_button), GTK_RELIEF_NONE);
 
     // Khởi tạo nút upload
-    add_song_button = gtk_button_new_with_label("Upload");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), add_song_button, 0, 580);
-    gtk_widget_set_size_request(add_song_button, 300, 50);
-    gtk_button_set_relief(GTK_BUTTON(add_song_button), GTK_RELIEF_NONE);
+    library_button = gtk_button_new_with_label("Upload");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), library_button, 0, 580);
+    gtk_widget_set_size_request(library_button, 300, 50);
+    gtk_button_set_relief(GTK_BUTTON(library_button), GTK_RELIEF_NONE);
 
     // Khởi tạo nút Playlist
     add_playlist_button = gtk_button_new_with_label("Add Playlist");
@@ -89,10 +83,9 @@ void set_menu_properties()
     gtk_button_set_relief(GTK_BUTTON(add_playlist_button), GTK_RELIEF_NONE);
 
     // Add event clicked cho từng nút
-    g_signal_connect(explorer_button, "clicked", G_CALLBACK(tab_explorer_click), NULL);
-    g_signal_connect(my_music_button, "clicked", G_CALLBACK(tab_my_music_click), NULL);
-    g_signal_connect(playlist_button, "clicked", G_CALLBACK(tab_playlist_click), NULL);
-    g_signal_connect(add_song_button, "clicked", G_CALLBACK(upload), NULL);
+    g_signal_connect(home_button, "clicked", G_CALLBACK(tab_explorer_click), NULL);
+    g_signal_connect(heart_button, "clicked", G_CALLBACK(tab_playlist_click), NULL);
+    g_signal_connect(library_button, "clicked", G_CALLBACK(upload), NULL);
     g_signal_connect(add_playlist_button, "clicked", G_CALLBACK(add_playlist), NULL);
 
     // Khởi tạo Logo của app ở đỉnh của selection menu
@@ -113,5 +106,5 @@ void menu_show()
 {
     set_menu_properties();
 
-    load_menu_css();
+    //load_menu_css();
 }

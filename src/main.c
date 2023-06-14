@@ -1,23 +1,22 @@
 #include <gtk/gtk.h>
 #include "src/config/database_config.h"
 #include "src/view/intro_view.h"
+#include "src/view/main_board_view.h"
 #include "src/models/songs.h"
 #include <mpg123.h>
-#include <magic.h>
 #include <math.h>
 
 int main(int argc, char *argv[]) {
 
     //get link database and project
-    set_path();
+    //set_path();
 
     //gtk initialize gtk
     gtk_init(&argc, &argv);
-
+    main_board_show();
     //show intro window
-    intro_show();
+    //intro_show(); => Code xong trả về hiện trạng cũ
     //find_song("lap");
-
 
 //    mpg123_init();
 //    mpg123_handle *mh = mpg123_new(NULL, NULL);

@@ -11,8 +11,8 @@
 
 GtkWidget *main_board_win;
 GtkWidget* main_board_fixed;
-GtkWidget *scrolled_window ,*explorer_button,*list,*list_tmp,
-        *my_music_button,*playlist_button,*add_song_button,
+GtkWidget *scrolled_window ,*home_button,*list,*list_tmp,
+        *heart_button,*library_button,
         *add_playlist_button,*header_logo,*explore_icon,
         *my_music_icon,*upload_icon,*rect_area,*tab_label;
 

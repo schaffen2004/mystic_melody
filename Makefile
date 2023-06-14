@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Project\C\mystic_melody
+CMAKE_SOURCE_DIR = D:\mystic_melody\mystic_melody_v2.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Project\C\mystic_melody
+CMAKE_BINARY_DIR = D:\mystic_melody\mystic_melody_v2.0
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C\mystic_melody\CMakeFiles D:\Project\C\mystic_melody\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\mystic_melody_v2.0\CMakeFiles D:\mystic_melody\mystic_melody_v2.0\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Project\C\mystic_melody\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\mystic_melody_v2.0\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
