@@ -209,7 +209,7 @@ void tab_explorer_click()
     gtk_widget_show_all(scrolled_window);
 }
 
-void tab_my_music_click()
+void tab_favourite_click()
 {
     tab_previous=tab_curr;
     tab_curr=2;
@@ -236,7 +236,7 @@ void tab_my_music_click()
 
 }
 
-void tab_playlist_click()
+void tab_library_click()
 {
     tab_previous=tab_curr;
     tab_curr=3;
@@ -263,7 +263,7 @@ void tab_playlist_click()
     gtk_widget_show_all(scrolled_window);
 }
 
-void upload()
+void tab_upload_click()
 {
     tab_previous=tab_curr;
     tab_curr=4;

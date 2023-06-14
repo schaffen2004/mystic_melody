@@ -1,4 +1,4 @@
-# Install script for directory: D:/mystic_melody/mystic_melody_v2.0
+# Install script for directory: D:/mystic_melody
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/mystic_melody/mystic_melody_v2.0/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/mystic_melody/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,3 +1,3 @@
-D:/mystic_melody/mystic_melody_v2.0/CMakeFiles/C.dir
-D:/mystic_melody/mystic_melody_v2.0/CMakeFiles/edit_cache.dir
-D:/mystic_melody/mystic_melody_v2.0/CMakeFiles/rebuild_cache.dir
+D:/mystic_melody/CMakeFiles/C.dir
+D:/mystic_melody/CMakeFiles/edit_cache.dir
+D:/mystic_melody/CMakeFiles/rebuild_cache.dir

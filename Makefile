@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.3.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\mystic_melody\mystic_melody_v2.0
+CMAKE_SOURCE_DIR = D:\mystic_melody
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\mystic_melody\mystic_melody_v2.0
+CMAKE_BINARY_DIR = D:\mystic_melody
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\mystic_melody_v2.0\CMakeFiles D:\mystic_melody\mystic_melody_v2.0\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\CMakeFiles D:\mystic_melody\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\mystic_melody_v2.0\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\mystic_melody\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -385,32 +385,32 @@ src/view/components/add_playlist.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/add_playlist.c.s
 .PHONY : src/view/components/add_playlist.c.s
 
-src/view/components/menu.obj: src/view/components/menu.c.obj
+src/view/components/header_bar.obj: src/view/components/header_bar.c.obj
 
-.PHONY : src/view/components/menu.obj
+.PHONY : src/view/components/header_bar.obj
 
 # target to build an object file
-src/view/components/menu.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.obj
-.PHONY : src/view/components/menu.c.obj
+src/view/components/header_bar.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.obj
+.PHONY : src/view/components/header_bar.c.obj
 
-src/view/components/menu.i: src/view/components/menu.c.i
+src/view/components/header_bar.i: src/view/components/header_bar.c.i
 
-.PHONY : src/view/components/menu.i
+.PHONY : src/view/components/header_bar.i
 
 # target to preprocess a source file
-src/view/components/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.i
-.PHONY : src/view/components/menu.c.i
+src/view/components/header_bar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.i
+.PHONY : src/view/components/header_bar.c.i
 
-src/view/components/menu.s: src/view/components/menu.c.s
+src/view/components/header_bar.s: src/view/components/header_bar.c.s
 
-.PHONY : src/view/components/menu.s
+.PHONY : src/view/components/header_bar.s
 
 # target to generate assembly for a file
-src/view/components/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/menu.c.s
-.PHONY : src/view/components/menu.c.s
+src/view/components/header_bar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/header_bar.c.s
+.PHONY : src/view/components/header_bar.c.s
 
 src/view/components/music_bar.obj: src/view/components/music_bar.c.obj
 
@@ -637,9 +637,9 @@ help:
 	@echo ... src/view/components/add_playlist.obj
 	@echo ... src/view/components/add_playlist.i
 	@echo ... src/view/components/add_playlist.s
-	@echo ... src/view/components/menu.obj
-	@echo ... src/view/components/menu.i
-	@echo ... src/view/components/menu.s
+	@echo ... src/view/components/header_bar.obj
+	@echo ... src/view/components/header_bar.i
+	@echo ... src/view/components/header_bar.s
 	@echo ... src/view/components/music_bar.obj
 	@echo ... src/view/components/music_bar.i
 	@echo ... src/view/components/music_bar.s

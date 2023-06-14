@@ -64,9 +64,9 @@ void set_header_bar_properties()
 
     // Add event clicked cho từng nút
     g_signal_connect(explorer_button, "clicked", G_CALLBACK(tab_explorer_click), NULL);
-    //g_signal_connect(favourite_button, "clicked", G_CALLBACK(tab_favourite_click), NULL);
-    //g_signal_connect(library_button, "clicked", G_CALLBACK(tab_library_click), NULL);
-    //g_signal_connect(upload_button, "clicked", G_CALLBACK(tab_upload_click), NULL);
+    g_signal_connect(favourite_button, "clicked", G_CALLBACK(tab_favourite_click), NULL);
+    g_signal_connect(library_button, "clicked", G_CALLBACK(tab_library_click), NULL);
+    g_signal_connect(upload_button, "clicked", G_CALLBACK(tab_upload_click), NULL);
 
 /*
     // Khởi tạo Logo của app ở đỉnh của selection menu

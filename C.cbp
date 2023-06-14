@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/mystic_melody/mystic_melody_v2.0"/>
+				<Option working_dir="D:/mystic_melody"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C">
-				<Option output="D:/mystic_melody/mystic_melody_v2.0/C.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/mystic_melody/mystic_melody_v2.0"/>
+				<Option output="D:/mystic_melody/C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/mystic_melody"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
-					<Add directory="D:/mystic_melody/mystic_melody_v2.0"/>
+					<Add directory="D:/mystic_melody"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/gtk-3.0"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/pango-1.0"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/glib-2.0"/>
@@ -47,21 +47,21 @@
 					<Add directory="D:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 C"/>
-					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 C"/>
+					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C/fast">
-				<Option output="D:/mystic_melody/mystic_melody_v2.0/C.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/mystic_melody/mystic_melody_v2.0"/>
+				<Option output="D:/mystic_melody/C.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/mystic_melody"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DLIBDEFLATE_DLL"/>
-					<Add directory="D:/mystic_melody/mystic_melody_v2.0"/>
+					<Add directory="D:/mystic_melody"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/gtk-3.0"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/pango-1.0"/>
 					<Add directory="D:/msys64/msys64/mingw64/bin/../include/glib-2.0"/>
@@ -83,133 +83,133 @@
 					<Add directory="D:/msys64/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 C/fast"/>
-					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 C/fast"/>
+					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/mystic_melody/mystic_melody_v2.0"/>
+				<Option working_dir="D:/mystic_melody"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/mystic_melody/mystic_melody_v2.0"/>
+				<Option working_dir="D:/mystic_melody"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/mystic_melody_v2.0/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/mystic_melody/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/config/database_config.c">
+		<Unit filename="D:/mystic_melody/src/config/database_config.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/config/database_config.h">
+		<Unit filename="D:/mystic_melody/src/config/database_config.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/main_board_control.c">
+		<Unit filename="D:/mystic_melody/src/control/main_board_control.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/main_board_control.h">
+		<Unit filename="D:/mystic_melody/src/control/main_board_control.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/sign_in_control.c">
+		<Unit filename="D:/mystic_melody/src/control/sign_in_control.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/sign_in_control.h">
+		<Unit filename="D:/mystic_melody/src/control/sign_in_control.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/sign_up_control.c">
+		<Unit filename="D:/mystic_melody/src/control/sign_up_control.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/control/sign_up_control.h">
+		<Unit filename="D:/mystic_melody/src/control/sign_up_control.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/main.c">
+		<Unit filename="D:/mystic_melody/src/main.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/playlist.c">
+		<Unit filename="D:/mystic_melody/src/models/playlist.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/playlist.h">
+		<Unit filename="D:/mystic_melody/src/models/playlist.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/songs.c">
+		<Unit filename="D:/mystic_melody/src/models/songs.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/songs.h">
+		<Unit filename="D:/mystic_melody/src/models/songs.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/users.c">
+		<Unit filename="D:/mystic_melody/src/models/users.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/models/users.h">
+		<Unit filename="D:/mystic_melody/src/models/users.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/add_playlist.c">
+		<Unit filename="D:/mystic_melody/src/view/components/add_playlist.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/add_playlist.h">
+		<Unit filename="D:/mystic_melody/src/view/components/add_playlist.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/menu.c">
+		<Unit filename="D:/mystic_melody/src/view/components/header_bar.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/menu.h">
+		<Unit filename="D:/mystic_melody/src/view/components/header_bar.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/music_bar.c">
+		<Unit filename="D:/mystic_melody/src/view/components/music_bar.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/music_bar.h">
+		<Unit filename="D:/mystic_melody/src/view/components/music_bar.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/search_bar.c">
+		<Unit filename="D:/mystic_melody/src/view/components/search_bar.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/search_bar.h">
+		<Unit filename="D:/mystic_melody/src/view/components/search_bar.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/upload.c">
+		<Unit filename="D:/mystic_melody/src/view/components/upload.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/components/upload.h">
+		<Unit filename="D:/mystic_melody/src/view/components/upload.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/intro_view.c">
+		<Unit filename="D:/mystic_melody/src/view/intro_view.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/intro_view.h">
+		<Unit filename="D:/mystic_melody/src/view/intro_view.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/main_board_view.c">
+		<Unit filename="D:/mystic_melody/src/view/main_board_view.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/main_board_view.h">
+		<Unit filename="D:/mystic_melody/src/view/main_board_view.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/sign_in_view.c">
+		<Unit filename="D:/mystic_melody/src/view/sign_in_view.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/sign_in_view.h">
+		<Unit filename="D:/mystic_melody/src/view/sign_in_view.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/sign_up_view.c">
+		<Unit filename="D:/mystic_melody/src/view/sign_up_view.c">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/src/view/sign_up_view.h">
+		<Unit filename="D:/mystic_melody/src/view/sign_up_view.h">
 			<Option target="C"/>
 		</Unit>
-		<Unit filename="D:/mystic_melody/mystic_melody_v2.0/CMakeLists.txt">
+		<Unit filename="D:/mystic_melody/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
