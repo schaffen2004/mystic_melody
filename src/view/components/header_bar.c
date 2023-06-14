@@ -2,8 +2,6 @@
 // Created by ADMIN on 4/16/2023.
 //
 
-#include <string.h>
-#include <unistd.h>
 #include "header_bar.h"
 #include "src/view/main_board_view.h"
 #include "src/control/main_board_control.h"
@@ -68,13 +66,11 @@ void set_header_bar_properties()
     g_signal_connect(library_button, "clicked", G_CALLBACK(tab_library_click), NULL);
     g_signal_connect(upload_button, "clicked", G_CALLBACK(tab_upload_click), NULL);
 
-/*
+    /*
     // Khởi tạo Logo của app ở đỉnh của selection menu
     header_logo = gtk_image_new_from_file("assets/header_logo.png");
     gtk_fixed_put(GTK_FIXED(main_board_fixed), header_logo, 20, 0);
-*/
-
-    printf( g_get_current_dir());
+    */
 
     // Thêm các icon của từng mục
     explorer_icon = gtk_image_new_from_file("assets/explorer_icon.png");
