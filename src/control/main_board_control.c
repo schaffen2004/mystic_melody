@@ -153,6 +153,7 @@ void search_song()
 
     // Thay đổi tab_label
     change_tab_label("Song Found");
+    refresh_tab();
 
     const char *name_of_song= gtk_entry_get_text(GTK_ENTRY(entry_search_bar));
 
