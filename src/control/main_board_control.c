@@ -1,29 +1,28 @@
-//
-// Created by ADMIN on 4/17/2023.
-//
-
-#include "main_board_control.h"
-#include "src/view/sign_in_view.h"
-#include "src/view/components/music_bar.h"
-#include "src/view/components/search_bar.h"
-#include "src/view/main_board_view.h"
-#include "src/view/components/upload.h"
-#include "src/view/components/add_playlist.h"
-#include "src/models/songs.h"
-#include "src/models/playlist.h"
-#include "src/view/main_board_view.h"
 #include <string.h>
 #include <sndfile.h>
-#include "src/config/database_config.h"
-#include "src/view/components/music_bar.h"
-#include "src/control/sign_in_control.h"
-
 #include <windows.h>
 #include <mmsystem.h>
 
+#include "main_board_control.h"
+#include "src/config/database_config.h"
+#include "src/control/sign_in_control.h"
+#include "src/models/songs.h"
+#include "src/models/playlist.h"
+#include "src/view/sign_in_view.h"
+#include "src/view/main_board_view.h"
+#include "src/view/components/music_bar.h"
+#include "src/view/components/search_bar.h"
+#include "src/view/components/upload_tab.h"
+#include "src/view/components/upload.h"
+#include "src/view/components/add_playlist.h"
+
 #pragma comment(lib, "winmm.lib")
-int tab_previous,tab_curr;
-int upload_status,add_playlist_status;
+int
+    tab_previous,
+    tab_curr;
+int
+    upload_status,
+    add_playlist_status;
 static int stt = -1; // Khởi tạo giá trị ban đầu cho biến stt
 GtkWidget *choose_playlist,*entry;
 
@@ -39,7 +38,10 @@ void refresh_tab()
         gtk_widget_destroy(add_playlist_fixed);
         add_playlist_status=0;
     }
-
+    if (tab_curr != 6 && tab_previous == 6) //Not in My Upload tab
+    {
+        upload_tab_hide();
+    }
 }
 
 void stop_music()
@@ -134,20 +136,8 @@ void selected(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data)
         int stt = (int)index;
         strcpy(curr_playlist_name,playlist[stt].playlist_title);
 
-        GdkRGBA color_tab_label;
-        gdk_rgba_parse(&color_tab_label, "white");
-
-        // Thay đổi nội dung label
-        gtk_label_set_text(GTK_LABEL(tab_label), "Songs in playlist");
-        gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-        // Lấy layout của label
-        PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
-
-        // Thay đổi kích thước và độ đậm của label
-        PangoFontDescription *font_desc = pango_font_description_new();
-        pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-        pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-        pango_layout_set_font_description(layout, font_desc);
+        // Thay đổi tab_label
+        change_tab_label("Songs In Playlist");
 
         create_list_song_in_playlist(list);
 
@@ -161,21 +151,12 @@ void search_song()
     tab_previous=tab_curr;
     tab_curr=0;
 
-    GdkRGBA color_tab_label;
-    gdk_rgba_parse(&color_tab_label, "white");
-    // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "Song found");
-    gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-    // Lấy layout của label
-    PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
-
-    // Thay đổi kích thước và độ đậm của label
-    PangoFontDescription *font_desc = pango_font_description_new();
-    pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-    pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-    pango_layout_set_font_description(layout, font_desc);
+    // Thay đổi tab_label
+    change_tab_label("Song Found");
 
     const char *name_of_song= gtk_entry_get_text(GTK_ENTRY(entry_search_bar));
+
+    // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
 
     create_list_song(name_of_song);
@@ -188,20 +169,11 @@ void tab_explorer_click()
     tab_previous=tab_curr;
     tab_curr=1;
     refresh_tab();
-    GdkRGBA color_tab_label;
-    gdk_rgba_parse(&color_tab_label, "white");
 
-    // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "Explorer");
-    gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-    // Lấy layout của label
-    PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
+    // Thay đổi tab_label
+    change_tab_label("Explorer");
 
-    // Thay đổi kích thước và độ đậm của label
-    PangoFontDescription *font_desc = pango_font_description_new();
-    pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-    pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-    pango_layout_set_font_description(layout, font_desc);
+    // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
 
     create_list_song_explorer(list);
@@ -214,20 +186,11 @@ void tab_favourite_click()
     tab_previous=tab_curr;
     tab_curr=2;
     refresh_tab();
-    GdkRGBA color_tab_label;
-    gdk_rgba_parse(&color_tab_label, "white");
 
-    // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "My Music");
-    gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-    // Lấy layout của label
-    PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
+    // Thay đổi tab_label
+    change_tab_label("My Music");
 
-    // Thay đổi kích thước và độ đậm của label
-    PangoFontDescription *font_desc = pango_font_description_new();
-    pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-    pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-    pango_layout_set_font_description(layout, font_desc);
+    // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
 
     create_list_song_my_music(list);
@@ -241,21 +204,10 @@ void tab_library_click()
     tab_previous=tab_curr;
     tab_curr=3;
 
+    // Thay đổi tab_label
+    change_tab_label("Playlist");
 
-    GdkRGBA color_tab_label;
-    gdk_rgba_parse(&color_tab_label, "white");
-
-    // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "Playlist");
-    gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-    // Lấy layout của label
-    PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
-
-    // Thay đổi kích thước và độ đậm của label
-    PangoFontDescription *font_desc = pango_font_description_new();
-    pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-    pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-    pango_layout_set_font_description(layout, font_desc);
+    // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
 
     create_playlist(list);
@@ -263,26 +215,17 @@ void tab_library_click()
     gtk_widget_show_all(scrolled_window);
 }
 
-void tab_upload_click()
+void button_upload_click()
 {
     tab_previous=tab_curr;
     tab_curr=4;
 
-    GdkRGBA color_tab_label;
-    gdk_rgba_parse(&color_tab_label, "white");
+    // Thay đổi tab_label
+    change_tab_label("Upload");
 
-    // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "Upload");
-    gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
-    // Lấy layout của label
-    PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
-
-    // Thay đổi kích thước và độ đậm của label
-    PangoFontDescription *font_desc = pango_font_description_new();
-    pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
-    pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
-    pango_layout_set_font_description(layout, font_desc);
+    // Xóa tất cả các phần tử trong GtkListBox
     gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
+
     refresh_tab();
     upload_show();
     gtk_widget_show_all(main_board_fixed);
@@ -293,12 +236,43 @@ void add_playlist()
 {
     tab_previous=tab_curr;
     tab_curr=5;
+
+    // Thay đổi tab_label
+    change_tab_label("Add New Playlist");
+
+    // Xóa tất cả các phần tử trong GtkListBox
+    gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
+
+    refresh_tab();
+    add_playlist_show();
+    gtk_widget_show_all(main_board_fixed);
+    add_playlist_status=1;
+}
+
+void tab_upload_click() {
+    tab_previous=tab_curr;
+    tab_curr=6;
+
+    // Thay đổi tab_label
+    change_tab_label("My Upload");
+
+    // Xóa tất cả các phần tử trong GtkListBox
+    gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
+
+    refresh_tab();
+    upload_tab_show();
+    gtk_widget_show_all(main_board_fixed);
+}
+
+void change_tab_label(char *label_string)
+{
     GdkRGBA color_tab_label;
     gdk_rgba_parse(&color_tab_label, "white");
 
     // Thay đổi nội dung label
-    gtk_label_set_text(GTK_LABEL(tab_label), "Add new playlist");
+    gtk_label_set_text(GTK_LABEL(tab_label), label_string);
     gtk_widget_override_color(tab_label, GTK_STATE_NORMAL, &color_tab_label);
+
     // Lấy layout của label
     PangoLayout *layout = gtk_label_get_layout(GTK_LABEL(tab_label));
 
@@ -307,12 +281,6 @@ void add_playlist()
     pango_font_description_set_weight(font_desc, PANGO_WEIGHT_BOLD);
     pango_font_description_set_size(font_desc, 24 * PANGO_SCALE);
     pango_layout_set_font_description(layout, font_desc);
-    // Xóa tất cả các phần tử trong GtkListBox
-    gtk_container_foreach(GTK_CONTAINER(list), (GtkCallback)gtk_widget_destroy, NULL);
-    refresh_tab();
-    add_playlist_show();
-    gtk_widget_show_all(main_board_fixed);
-    add_playlist_status=1;
 }
 
 void logout_click()
