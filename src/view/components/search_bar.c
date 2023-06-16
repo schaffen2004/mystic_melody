@@ -5,9 +5,10 @@
 #include "search_bar.h"
 #include "src/view/main_board_view.h"
 #include "src/control/main_board_control.h"
-GtkWidget *entry_search_bar,
-        *exit_button,
-        *exit_icon;
+GtkWidget
+    *entry_search_bar,
+    *exit_button,
+    *exit_icon;
 
 void  search_bar_show()
 {
@@ -35,6 +36,6 @@ void  search_bar_show()
 
     g_signal_connect(exit_button, "clicked", G_CALLBACK(exit), NULL);
 
-    exit_icon = gtk_image_new_from_file("assets/exit_logo.png");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), exit_icon, 1440, 15);
+    exit_icon = gtk_image_new_from_file("assets/exit_icon.png");
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), exit_icon, 1460, 35);
 }
