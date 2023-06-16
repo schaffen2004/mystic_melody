@@ -3,11 +3,11 @@ project(${PROJECT_NAME} C)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
-
-find_library(SQLITE3_LIBRARY sqlite3 HINTS lib/)
 include_directories(${GTK3_INCLUDE_DIRS})
 link_directories(${GTK3_LIBRARY_DIRS})
 add_definitions(${GTK3_CFLAGS_OTHER})
+
+find_library(SQLITE3_LIBRARY sqlite3 HINTS lib/)
 find_library(MPG123_LIBRARIES NAMES mpg123)
 include_directories(${MPG123_INCLUDE_DIRS})
 
@@ -49,9 +49,9 @@ add_executable(${PROJECT_NAME}
         src/view/components/upload.c
         src/view/components/upload.h
         src/view/components/add_playlist.c
-        src/view/components/add_playlist.h)
-
-
+        src/view/components/add_playlist.h
+        src/view/components/upload_tab.c
+        src/view/components/upload_tab.h)
 
 target_link_libraries(${PROJECT_NAME} ${GTK3_LIBRARIES})
 target_link_libraries(${PROJECT_NAME} ${SQLITE3_LIBRARY})
