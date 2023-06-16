@@ -1,7 +1,3 @@
-//
-// Created by ADMIN on 4/17/2023.
-//
-
 #ifndef C_MAIN_BOARD_CONTROL_H
 #define C_MAIN_BOARD_CONTROL_H
 #include <gtk/gtk.h>
@@ -13,7 +9,9 @@ void tab_explorer_click();
 void tab_favourite_click();
 void tab_library_click();
 void tab_upload_click();
+void button_upload_click();
 void add_playlist();
+void change_tab_label(char *label_string);
 void selected(GtkListBox *listbox, GtkListBoxRow *row, gpointer user_data);
 void upload_new_song(GtkWidget *widget, gpointer data);
 extern void play_music();
