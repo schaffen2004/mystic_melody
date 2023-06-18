@@ -493,6 +493,33 @@ src/view/components/upload.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/upload.c.s
 .PHONY : src/view/components/upload.c.s
 
+src/view/components/upload_tab.obj: src/view/components/upload_tab.c.obj
+
+.PHONY : src/view/components/upload_tab.obj
+
+# target to build an object file
+src/view/components/upload_tab.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/upload_tab.c.obj
+.PHONY : src/view/components/upload_tab.c.obj
+
+src/view/components/upload_tab.i: src/view/components/upload_tab.c.i
+
+.PHONY : src/view/components/upload_tab.i
+
+# target to preprocess a source file
+src/view/components/upload_tab.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/upload_tab.c.i
+.PHONY : src/view/components/upload_tab.c.i
+
+src/view/components/upload_tab.s: src/view/components/upload_tab.c.s
+
+.PHONY : src/view/components/upload_tab.s
+
+# target to generate assembly for a file
+src/view/components/upload_tab.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\C.dir\build.make CMakeFiles/C.dir/src/view/components/upload_tab.c.s
+.PHONY : src/view/components/upload_tab.c.s
+
 src/view/intro_view.obj: src/view/intro_view.c.obj
 
 .PHONY : src/view/intro_view.obj
@@ -649,6 +676,9 @@ help:
 	@echo ... src/view/components/upload.obj
 	@echo ... src/view/components/upload.i
 	@echo ... src/view/components/upload.s
+	@echo ... src/view/components/upload_tab.obj
+	@echo ... src/view/components/upload_tab.i
+	@echo ... src/view/components/upload_tab.s
 	@echo ... src/view/intro_view.obj
 	@echo ... src/view/intro_view.i
 	@echo ... src/view/intro_view.s

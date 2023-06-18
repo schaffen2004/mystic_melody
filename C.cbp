@@ -185,6 +185,12 @@
 		<Unit filename="D:/mystic_melody/src/view/components/upload.h">
 			<Option target="C"/>
 		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/upload_tab.c">
+			<Option target="C"/>
+		</Unit>
+		<Unit filename="D:/mystic_melody/src/view/components/upload_tab.h">
+			<Option target="C"/>
+		</Unit>
 		<Unit filename="D:/mystic_melody/src/view/intro_view.c">
 			<Option target="C"/>
 		</Unit>

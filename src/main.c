@@ -13,9 +13,9 @@ int main(int argc, char *argv[]) {
 
     //gtk initialize gtk
     gtk_init(&argc, &argv);
-    
+    main_board_show();
     //show intro window => Code xong trả về hiện trạng cũ
-    intro_show(); 
+    //intro_show();
     //find_song("lap");
 
 //    mpg123_init();

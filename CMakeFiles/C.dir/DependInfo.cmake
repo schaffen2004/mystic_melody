@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "D:/mystic_melody/src/view/components/music_bar.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/components/music_bar.c.obj"
   "D:/mystic_melody/src/view/components/search_bar.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/components/search_bar.c.obj"
   "D:/mystic_melody/src/view/components/upload.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/components/upload.c.obj"
+  "D:/mystic_melody/src/view/components/upload_tab.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/components/upload_tab.c.obj"
   "D:/mystic_melody/src/view/intro_view.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/intro_view.c.obj"
   "D:/mystic_melody/src/view/main_board_view.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/main_board_view.c.obj"
   "D:/mystic_melody/src/view/sign_in_view.c" "D:/mystic_melody/CMakeFiles/C.dir/src/view/sign_in_view.c.obj"

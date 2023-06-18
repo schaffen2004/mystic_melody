@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/C.dir/src/view/components/music_bar.c.obj"
   "CMakeFiles/C.dir/src/view/components/search_bar.c.obj"
   "CMakeFiles/C.dir/src/view/components/upload.c.obj"
+  "CMakeFiles/C.dir/src/view/components/upload_tab.c.obj"
   "CMakeFiles/C.dir/src/view/intro_view.c.obj"
   "CMakeFiles/C.dir/src/view/main_board_view.c.obj"
   "CMakeFiles/C.dir/src/view/sign_in_view.c.obj"
