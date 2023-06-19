@@ -6,6 +6,7 @@
 #include "src/view/main_board_view.h"
 #include "src/control/main_board_control.h"
 
+// Biến toàn cục
 GtkWidget
     *label_song_upload,
     *entry_song_upload,
@@ -21,11 +22,13 @@ GtkWidget
 
 void upload_show()
 {
+    // Khởi tạo upload_fixed
     GdkRGBA color_upload;
     gdk_rgba_parse(&color_upload, "white");
     upload_fixed = gtk_fixed_new();
     gtk_fixed_put(GTK_FIXED(main_board_fixed), upload_fixed, 0, 0);
 
+    // Khởi tạo các label, entry, button
     label_song_upload = gtk_label_new("Song Name:");
     gtk_fixed_put(GTK_FIXED(upload_fixed), label_song_upload, 180, 180);
     gtk_widget_override_color(label_song_upload , GTK_STATE_NORMAL, &color_upload);
@@ -66,8 +69,6 @@ void upload_show()
     label_upload_status = gtk_label_new("");
     gtk_fixed_put(GTK_FIXED(upload_fixed), label_upload_status, 180, 560);
     gtk_widget_override_color(label_upload_status , GTK_STATE_NORMAL, &color_upload);
-
-    gtk_widget_show_all(main_board_fixed);
 }
 
 // Đổi nội dung label thông báo tình trạng upload (Ex: Song uploaded successfully!)
