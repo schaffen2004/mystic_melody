@@ -11,4 +11,5 @@ extern GtkWidget *label_song_upload, *entry_song_upload,
 *label_music_upload, *music_file_upload,*upload_fixed;
 
 void upload_show();
+void change_upload_status(char *str);
 #endif //C_UPLOAD_H

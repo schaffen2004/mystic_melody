@@ -5,11 +5,19 @@
 #include "upload.h"
 #include "src/view/main_board_view.h"
 #include "src/control/main_board_control.h"
-GtkWidget *label_song_upload, *entry_song_upload;
-GtkWidget *label_artist_upload, *entry_artist_upload;
-GtkWidget *label_image_upload, *image_file_upload;
-GtkWidget *label_music_upload, *music_file_upload;
-GtkWidget *upload_button,*upload_fixed;
+
+GtkWidget
+    *label_song_upload,
+    *entry_song_upload,
+    *label_artist_upload,
+    *entry_artist_upload,
+    *label_image_upload,
+    *image_file_upload,
+    *label_music_upload,
+    *music_file_upload,
+    *upload_button,
+    *label_upload_status,
+    *upload_fixed;
 
 void upload_show()
 {
@@ -55,5 +63,14 @@ void upload_show()
     gtk_fixed_put(GTK_FIXED(upload_fixed), upload_button, 300, 510);
     g_signal_connect(upload_button, "clicked", G_CALLBACK(upload_new_song), NULL);
 
+    label_upload_status = gtk_label_new("");
+    gtk_fixed_put(GTK_FIXED(upload_fixed), label_upload_status, 180, 560);
+    gtk_widget_override_color(label_upload_status , GTK_STATE_NORMAL, &color_upload);
+
     gtk_widget_show_all(main_board_fixed);
+}
+
+// Đổi nội dung label thông báo tình trạng upload (Ex: Song uploaded successfully!)
+void change_upload_status(char *str) {
+     gtk_label_set_label(label_upload_status, str);
 }
