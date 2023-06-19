@@ -1,9 +1,11 @@
 "C:\Program Files\JetBrains\CLion 2023.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\codeN\mystic_melody -B C:\codeN\mystic_melody
--- Configuring done
-CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
-Please set them or make sure they are set and tested correctly in the CMake files:
-MPG123_LIBRARIES
-    linked by target "C" in directory C:/codeN/mystic_melody
-
--- Generating done
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 2. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 8. Offending entry: >>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 256. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 269. Offending entry: >>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 374. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 378. Offending entry: >>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 461. Offending entry: <<<<<<< HEAD
+CMake Error: Parse error in cache file C:/codeN/mystic_melody/CMakeCache.txt on line 465. Offending entry: >>>>>>> a90d4adad90721c50ec94e9d18e6aab3c2e44822
+CMake Error: The current CMakeCache.txt directory C:/codeN/mystic_melody/CMakeCache.txt is different than the directory d:/mystic_melody where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source "C:/codeN/mystic_melody/CMakeLists.txt" does not match the source "D:/mystic_melody/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.
