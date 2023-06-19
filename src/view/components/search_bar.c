@@ -13,7 +13,7 @@ GtkWidget
 
 void  search_bar_show()
 {
-// Create a box to hold the search button and entry widget
+    // Create a box to hold the search button and entry widget
     GtkWidget *box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
     gtk_fixed_put(GTK_FIXED(main_board_fixed), box, 425, 26);
 
@@ -27,10 +27,9 @@ void  search_bar_show()
     gtk_container_add(GTK_CONTAINER(search), search_box);
 
     // Create an image widget for the search button
-    search_icon = gtk_image_new_from_file("assets/searchButton.svg");
+    search_icon = gtk_image_new_from_file("assets/search_icon.png");
     gtk_widget_set_name(search_icon, "button_search");
-    gtk_fixed_put(GTK_FIXED(main_board_fixed), search_icon, 440, 34);
-
+    gtk_fixed_put(GTK_FIXED(main_board_fixed), search_icon, 444, 38);
 
     // Create the entry widget
     entry_search_bar = gtk_entry_new();
@@ -51,6 +50,7 @@ void  search_bar_show()
                              "  padding: 0 65px; /* Adjust the padding as per your preference */"
                              "  margin: -3px;"
                              "}";
+
     GtkCssProvider *css_provider_entry = gtk_css_provider_new();
     gtk_css_provider_load_from_data(css_provider_entry, css_entry, -1, NULL);
     gtk_style_context_add_provider(gtk_widget_get_style_context(entry_search_bar),
