@@ -7,7 +7,6 @@
 #include <math.h>
 
 int main(int argc, char *argv[]) {
-
     //get link database and project
     //set_path();
 
@@ -86,4 +85,3 @@ int main(int argc, char *argv[]) {
 //    return 0;
     return 0;
 }
-
