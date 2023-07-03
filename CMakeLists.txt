@@ -49,7 +49,7 @@ add_executable(${PROJECT_NAME}
         src/view/components/upload.c
         src/view/components/upload.h
         src/view/components/add_playlist.c
-        src/view/components/add_playlist.h src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Resize/Resize_img.c src/Resize/Resize_img.c)
+        src/view/components/add_playlist.h src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Filter/Filter_image_source.c src/Resize/Resize_img.c src/Resize/Resize_img.c src/Random_music/off.on_repeat_music_playback_state.cpp)
 
 
 
